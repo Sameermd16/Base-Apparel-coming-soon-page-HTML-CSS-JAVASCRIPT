@@ -2,11 +2,16 @@
 
 
 .attribution {
-  font-size: 11px;
+  font-size: 13px;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 body{
     display: flex;
@@ -14,9 +19,10 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    font-family: 'Josefin Sans', sans-serif;
+    gap: 30px;
 }
 .grid_container{
+    font-family: 'Josefin Sans', sans-serif;
     display: grid;
     grid-template-columns: 550px 400px;
     /* border: 1px solid black; */
@@ -73,7 +79,7 @@ form input:nth-child(2){
     top: 0;
 }
 form input:nth-child(2):hover{
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 10px hsla(0, 74%, 74%, 0.5);
 }
 ::placeholder{
     color: hsl(0, 36%, 70%);
@@ -83,4 +89,61 @@ form img{
     position: absolute;
     top: 15px;
     right: 30px;
+}
+picture{
+    width: 100%;
+}
+.mobile_hero_hidden{
+    display: none;
+}
+@media only screen and (min-width: 600px) and (max-width: 1000px){
+    .grid_container{
+        grid-template-columns: 500px;
+        /* max-width: 500px; */
+    }
+}
+@media only screen and (max-width: 599px){
+    .grid_container{
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+    .pic_box{
+        display: none;
+    }
+    .mobile_hero_hidden{
+        display: block;
+    }
+    .text_box{
+        padding: 0;
+    }
+    .text_box img:nth-child(1){
+        /* border: 1px solid black; */
+        margin: 30px 0;
+    }
+    .header_box{
+        text-align: center;
+    }
+    .text_box p{
+        text-align: center;
+    }
+    form{
+        /* margin-top: 30px; */
+        padding: 30px;
+    }
+    form input:nth-child(2){
+        width: 60px;
+        right: 30px;
+        top: 30px;
+    }
+    .para_box{
+        padding: 0 30px;
+    }
+    form img{
+        position: absolute;
+        top: 40px;
+        right: 50px;
+    }
+    form input:nth-child(1){
+        width: 100%;
+    }
 }

@@ -13,12 +13,16 @@
   <main class="grid_container">
     <div class="text_box">
       <img src="images/logo.svg" alt="">
+      <img src="images/hero-mobile.jpg" alt="" class="mobile_hero_hidden" width="100%">
       <div class="header_box">
         <h1>WE'RE <span>COMING</span> <span>SOON</span></h1>
       </div>
-      <p>Hello fellow shoppers! We're currently building our new fashion store. 
-        Add your email below to stay up-to-date with announcements and our launch deals.
-      </p>
+      <div class="para_box">
+        <p>Hello fellow shoppers! We're currently building our new fashion store. 
+          Add your email below to stay up-to-date with announcements and our launch deals.
+        </p>
+      </div>
+      
       <form action="#">
         <input type="email" placeholder="Email Address" required>
         <input type="submit" value="">
@@ -27,7 +31,12 @@
       
     </div>
     <div class="pic_box">
-      <img src="images/hero-desktop.jpg" alt="" width="100%" height="100%">
+      <picture>
+        <source srcset="images/hero-desktop.jpg" media="(min-width: 601px)" width="100%" height="100%">
+        <source srcset="images/hero-mobile.jpg" media="(max-width: 600px)" width="100%" height="100%">
+        <img src="images/hero-desktop.jpg" alt="">
+      </picture>
+      <!-- <img src="images/hero-desktop.jpg" alt="" width="100%" height="100%"> -->
     </div>
   </main>
   <!-- We're coming soon
@@ -40,7 +49,7 @@
   <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="https://github.com/Sameermd16" target="_blank">Sameer md</a>.
     </p>
   </footer>
 <script src="script.js"></script>
