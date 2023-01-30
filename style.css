@@ -18,8 +18,8 @@ body{
 }
 .grid_container{
     display: grid;
-    grid-template-columns: 550px 350px;
-    border: 1px solid black;
+    grid-template-columns: 550px 400px;
+    /* border: 1px solid black; */
     max-width: 900px;
 }
 .text_box{
@@ -49,12 +49,38 @@ p{
     line-height: 25px;
     font-size: 13px;
 }
-input{
+form input:nth-child(1){
     width: 90%;
     outline: none;
-    border: none;
     padding: 15px;
     border-radius: 25px;
     border: 1px solid hsl(0, 36%, 70%);
     color: hsl(0, 36%, 70%);
+}
+form{
+    position: relative;
+}
+form input:nth-child(2){
+    padding: 16px 20px;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    position: absolute;
+    right: 2px;
+    cursor: pointer;
+    width: 80px;
+    top: 0;
+}
+form input:nth-child(2):hover{
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+::placeholder{
+    color: hsl(0, 36%, 70%);
+}
+form img{
+    /* border: 1px solid black; */
+    position: absolute;
+    top: 15px;
+    right: 30px;
 }
