@@ -96,6 +96,18 @@ picture{
 .mobile_hero_hidden{
     display: none;
 }
+.invalid_icon{
+    position: absolute;
+    transform: translate(-100px, -3px);
+    /* opacity: 0; */
+    visibility: hidden;
+}
+.invalid_text{
+    /* opacity: 0; */
+    visibility: hidden;
+}
+
+
 @media only screen and (min-width: 600px) and (max-width: 1000px){
     .grid_container{
         grid-template-columns: 500px;
